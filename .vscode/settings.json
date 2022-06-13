@@ -1,0 +1,4 @@
+{
+    "dotnet-test-explorer.testArguments": "--collect:\"XPlat Code Coverage\"",
+    "dotnet-test-explorer.enableTelemetry": false
+}
