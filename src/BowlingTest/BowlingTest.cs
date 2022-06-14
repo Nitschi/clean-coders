@@ -22,11 +22,6 @@ public class Tests
         }
     }
 
-    private void rollSpare()
-    {
-        g.Roll(5);
-        g.Roll(5);
-    }
 
     private void rollStrike()
     {
@@ -38,6 +33,50 @@ public class Tests
     {
         rollMany(20, 0);
         Assert.AreEqual(0, g.Score());
+    }
+
+    [Test]
+    public void allOnes()
+    {
+        rollMany(20, 1);
+        Assert.AreEqual(20, g.Score());
+    }
+
+    [Test]
+    public void oneStrike()
+    {
+        rollStrike();
+        g.Roll(3);
+        g.Roll(4);
+        rollMany(16, 0);
+        Assert.AreEqual(24, g.Score());
+    }
+
+    [Test]
+    public void twoStrikes()
+    {
+        rollStrike();
+        rollStrike();
+        rollMany(15, 0);
+        Assert.AreEqual(30, g.Score());
+    }
+
+    [Test]
+    public void twoStrikesThenOne()
+    {
+        rollStrike();
+        rollStrike();
+        g.Roll(1);
+        rollMany(14, 0);
+        Assert.AreEqual(33, g.Score());
+    }
+
+    [Test]
+    public void almostPerfect()
+    {
+        rollMany(10, 10);
+        g.Roll(0);
+        Assert.AreEqual(270, g.Score());
     }
 
 }

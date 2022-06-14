@@ -5,6 +5,7 @@ public class BowlingGame
 
     private int[] rolls = new int[21];
     private int currentRoll = 0;
+    private int currentFrame = 0;
 
     public void Roll(int pins)
     {
@@ -15,17 +16,12 @@ public class BowlingGame
     {
         int score = 0;
         int firstInFrame = 0;
-        for (int frame = 0; frame < 10; frame++)
+        for (int frame = 1; frame <= 10; frame++)
         {
             if (isStrike(firstInFrame))
             {
-                score += 10 + nextTwoBallsForStrike(firstInFrame);
+                score += 10 + nextTwoBallsForStrike(firstInFrame, frame);
                 firstInFrame++;
-            }
-            else if (isSpare(firstInFrame))
-            {
-                score += 10 + nextBallForSpare(firstInFrame);
-                firstInFrame += 2;
             }
             else
             {
@@ -41,24 +37,15 @@ public class BowlingGame
         return rolls[firstInFrame] + rolls[firstInFrame + 1];
     }
 
-    private int nextBallForSpare(int firstInFrame)
+    private int nextTwoBallsForStrike(int firstInFrame, int frame)
     {
-        return rolls[firstInFrame + 2];
-    }
-
-    private int nextTwoBallsForStrike(int firstInFrame)
-    {
+        if (frame == 10) return 0; // There are no two next balls
         return rolls[firstInFrame + 1] + rolls[firstInFrame + 2];
     }
 
     private bool isStrike(int firstInFrame)
     {
-        return rolls[firstInFrame] == 10;
-    }
-
-    private bool isSpare(int firstInFrame)
-    {
-        return rolls[firstInFrame] + rolls[firstInFrame + 1] == 10;
+        return rolls[firstInFrame] >= 9;
     }
 
 }
