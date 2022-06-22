@@ -4,7 +4,8 @@
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
-
+	"forwardPorts": [4200],
+	"containerEnv": { "SSH_PUBLIC_KEY": "${localEnv:SSH_PUBLIC_KEY}" },
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"ms-dotnettools.csharp",
@@ -14,7 +15,7 @@
 	],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "dotnet restore",
+	"postCreateCommand": "/workspaces/clean-coders-specification-testing/.devcontainer/docker-entrypoint.sh",
 
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode"
