@@ -1,6 +1,7 @@
 {
-    "dotnet-test-explorer.testArguments": "--collect:\"XPlat Code Coverage\"",
-		"dotnet-test-explorer.enableTelemetry": false,
-		"dotnet-test-explorer.autoWatch": true,
-		"coverage-gutters.showLineCoverage": true
+	"dotnet-test-explorer.testArguments": "--collect:\"XPlat Code Coverage\"",
+	"dotnet-test-explorer.enableTelemetry": false,
+	"dotnet-test-explorer.autoWatch": true,
+	"coverage-gutters.showLineCoverage": true,
+	"dotnet-test-explorer.testProjectPath": "*/*/*Test*.csproj"
 }
