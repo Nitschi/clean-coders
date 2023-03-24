@@ -2,38 +2,38 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
+            "label": "[Bowling] build",
             "command": "dotnet",
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/src/BowlingTest/BowlingTest.csproj",
+                "${workspaceFolder}/specification_testing/BowlingTest/BowlingTest.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "publish",
+            "label": "[Bowling] publish",
             "command": "dotnet",
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/src/BowlingTest/BowlingTest.csproj",
+                "${workspaceFolder}/specification_testing/BowlingTest/BowlingTest.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "watch",
+            "label": "[Bowling] watch",
             "command": "dotnet",
             "type": "process",
             "args": [
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/src/BowlingTest/BowlingTest.csproj"
+                "${workspaceFolder}/specification_testing/BowlingTest/BowlingTest.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
