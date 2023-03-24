@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dependency_inversion", "dependency_inversion", "{68D9274D-90C3-477A-855C-0F26AC90A397}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChoreCLI", "dependency_inversion\ChoreCLI\ChoreCLI.csproj", "{43ADF767-657E-458A-B89C-ED07EDC21032}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChoreLibrary", "dependency_inversion\ChoreLibrary\ChoreLibrary.csproj", "{AF19D640-167C-4BC1-B6AE-B1F8DF801570}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChoreTest", "dependency_inversion\ChoreTest\ChoreTest.csproj", "{8CB7C6E5-A804-4456-A02F-F66D3EAF5006}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "specification_testing", "specification_testing", "{3944F55D-63C3-477D-81B3-38BDF5A05C8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bowling", "specification_testing\Bowling\Bowling.csproj", "{567E262A-778B-4121-8187-AC631D94A88F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingTest", "specification_testing\BowlingTest\BowlingTest.csproj", "{1728AF8B-A946-4D86-822E-BA04150C8F4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43ADF767-657E-458A-B89C-ED07EDC21032}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43ADF767-657E-458A-B89C-ED07EDC21032}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43ADF767-657E-458A-B89C-ED07EDC21032}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43ADF767-657E-458A-B89C-ED07EDC21032}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF19D640-167C-4BC1-B6AE-B1F8DF801570}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF19D640-167C-4BC1-B6AE-B1F8DF801570}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF19D640-167C-4BC1-B6AE-B1F8DF801570}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF19D640-167C-4BC1-B6AE-B1F8DF801570}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CB7C6E5-A804-4456-A02F-F66D3EAF5006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CB7C6E5-A804-4456-A02F-F66D3EAF5006}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CB7C6E5-A804-4456-A02F-F66D3EAF5006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CB7C6E5-A804-4456-A02F-F66D3EAF5006}.Release|Any CPU.Build.0 = Release|Any CPU
+		{567E262A-778B-4121-8187-AC631D94A88F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{567E262A-778B-4121-8187-AC631D94A88F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{567E262A-778B-4121-8187-AC631D94A88F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{567E262A-778B-4121-8187-AC631D94A88F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1728AF8B-A946-4D86-822E-BA04150C8F4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1728AF8B-A946-4D86-822E-BA04150C8F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1728AF8B-A946-4D86-822E-BA04150C8F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1728AF8B-A946-4D86-822E-BA04150C8F4D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{43ADF767-657E-458A-B89C-ED07EDC21032} = {68D9274D-90C3-477A-855C-0F26AC90A397}
+		{AF19D640-167C-4BC1-B6AE-B1F8DF801570} = {68D9274D-90C3-477A-855C-0F26AC90A397}
+		{8CB7C6E5-A804-4456-A02F-F66D3EAF5006} = {68D9274D-90C3-477A-855C-0F26AC90A397}
+		{567E262A-778B-4121-8187-AC631D94A88F} = {3944F55D-63C3-477D-81B3-38BDF5A05C8A}
+		{1728AF8B-A946-4D86-822E-BA04150C8F4D} = {3944F55D-63C3-477D-81B3-38BDF5A05C8A}
+	EndGlobalSection
+EndGlobal

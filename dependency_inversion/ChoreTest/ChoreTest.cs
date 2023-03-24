@@ -2,6 +2,7 @@
 
 using NUnit.Framework;
 using ChoreLibrary;
+using Moq;
 
 public class Tests
 {
