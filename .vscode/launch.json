@@ -13,6 +13,17 @@
             "stopAtEntry": false
         },
         {
+            "name": "ChoreCLI",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "[Chores] build",
+            "program": "${workspaceFolder}/dependency_inversion/ChoreCLI/bin/Debug/net7.0/ChoreCLI.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/dependency_inversion/ChoreCLI",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
             "name": ".NET Core Attach",
             "type": "coreclr",
             "request": "attach"

@@ -36,6 +36,42 @@
                 "${workspaceFolder}/specification_testing/BowlingTest/BowlingTest.csproj"
             ],
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "[Chores] build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/dependency_inversion/ChoreCLI/ChoreCLI.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "[Chores] publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/dependency_inversion/ChoreCLI/ChoreCLI.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "[Chores] watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/dependency_inversion/ChoreCLI/ChoreCLI.csproj"
+            ],
+            "problemMatcher": "$msCompile"
         }
     ]
 }
