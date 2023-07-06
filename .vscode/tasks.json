@@ -79,7 +79,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/observer/ObserverExercise/ObserverExercise.csproj",
+                "${workspaceFolder}/observer/ObserverExercise.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -91,7 +91,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/observer/ObserverExercise/ObserverExercise.csproj",
+                "${workspaceFolder}/observer/ObserverExercise.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -105,7 +105,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/observer/ObserverExercise/ObserverExercise.csproj"
+                "${workspaceFolder}/observer/ObserverExercise.csproj"
             ],
             "problemMatcher": "$msCompile"
         },

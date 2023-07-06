@@ -6,7 +6,7 @@
         "type": "coreclr",
         "request": "launch",
         "preLaunchTask": "[ObserverExercise] build",
-        "program": "${workspaceFolder}/observer/ObserverExercise/bin/Debug/net7.0/ObserverExercise.dll",
+        "program": "${workspaceFolder}/observer/bin/Debug/net7.0/ObserverExercise.dll",
         "args": [],
         "cwd": "${workspaceFolder}",
         "stopAtEntry": false,
