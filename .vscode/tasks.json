@@ -72,6 +72,42 @@
                 "${workspaceFolder}/dependency_inversion/ChoreCLI/ChoreCLI.csproj"
             ],
             "problemMatcher": "$msCompile"
-        }
+        },
+        {
+            "label": "[ObserverExercise] build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/observer/ObserverExercise/ObserverExercise.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "[ObserverExercise] publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/observer/ObserverExercise/ObserverExercise.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "[ObserverExercise] watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/observer/ObserverExercise/ObserverExercise.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
     ]
 }
