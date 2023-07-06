@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingTest", "specificatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserverExercise", "observer\ObserverExercise.csproj", "{260D17AF-61DA-471B-A90E-C6F41A8EC215}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "builder", "builder\builder.csproj", "{86A471D0-E3C5-459C-BC19-5AE294D5439C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,10 @@ Global
 		{260D17AF-61DA-471B-A90E-C6F41A8EC215}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{260D17AF-61DA-471B-A90E-C6F41A8EC215}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{260D17AF-61DA-471B-A90E-C6F41A8EC215}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86A471D0-E3C5-459C-BC19-5AE294D5439C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86A471D0-E3C5-459C-BC19-5AE294D5439C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86A471D0-E3C5-459C-BC19-5AE294D5439C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86A471D0-E3C5-459C-BC19-5AE294D5439C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{43ADF767-657E-458A-B89C-ED07EDC21032} = {68D9274D-90C3-477A-855C-0F26AC90A397}
