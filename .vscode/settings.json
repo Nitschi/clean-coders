@@ -3,6 +3,5 @@
 	"dotnet-test-explorer.enableTelemetry": false,
 	"dotnet-test-explorer.autoWatch": true,
 	"coverage-gutters.showLineCoverage": true,
-	"dotnet-test-explorer.testProjectPath": "*/*/*Test*.csproj",
-	"omnisharp.sdkVersion": "7.0.302"
+	"dotnet-test-explorer.testProjectPath": "*/*/*Test*.csproj"
 }
