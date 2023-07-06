@@ -2,5 +2,10 @@
 ARG VARIANT="6.0-bullseye-slim"
 FROM mcr.microsoft.com/vscode/devcontainers/dotnet:0-${VARIANT}
 
-# Install tmux
-RUN apt-get update && apt-get install -y tmux
+RUN echo vscode ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/vscode \
+    && chmod 0440 /etc/sudoers.d/vscode
+
+# SSH Server
+RUN apt-get update \
+    && apt-get install -y openssh-server \
+    && mkdir /run/sshd
