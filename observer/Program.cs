@@ -2,8 +2,13 @@
 
 var alarm = new Alarm();
 
-alarm.AddObserver(new FireStation());
-alarm.AddObserver(new PoliceStation());
-alarm.AddObserver(new HospitalStation());
+var fireUnsubscriber = alarm.Subscribe(new FireStation());
+var policeUnsubscriber = alarm.Subscribe(new PoliceStation());
+var hospitalUnsubscriber = alarm.Subscribe(new HospitalStation());
 
 alarm.TriggerAlarm("Something bad");
+
+hospitalUnsubscriber.Dispose();
+
+alarm.TriggerAlarm("Again!!!");
+alarm.TurnOffAlarms();
