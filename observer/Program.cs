@@ -2,4 +2,8 @@
 
 var alarm = new Alarm();
 
-alarm.TriggerAlarm();
+alarm.AddObserver(new FireStation());
+alarm.AddObserver(new PoliceStation());
+alarm.AddObserver(new HospitalStation());
+
+alarm.TriggerAlarm("Something bad");
