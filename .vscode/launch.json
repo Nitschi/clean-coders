@@ -1,17 +1,28 @@
 {
     "version": "0.2.0",
     "configurations": [
-    {
-        "name": "Observer Exercise",
-        "type": "coreclr",
-        "request": "launch",
-        "preLaunchTask": "[ObserverExercise] build",
-        "program": "${workspaceFolder}/observer/bin/Debug/net6.0/ObserverExercise.dll",
-        "args": [],
-        "cwd": "${workspaceFolder}",
-        "stopAtEntry": false,
-        "console": "internalConsole"
-    },
+        {
+            "name": "Builder Exercise",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "[Builder] build",
+            "program": "${workspaceFolder}/builder/bin/Debug/net6.0/builder.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
+        {
+            "name": "Observer Exercise",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "[ObserverExercise] build",
+            "program": "${workspaceFolder}/observer/bin/Debug/net6.0/ObserverExercise.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
         {
             "name": "BowlingTest",
             "type": "coreclr",
