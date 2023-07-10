@@ -1,8 +1,5 @@
 ﻿// Copyright by refactoring guru (https://refactoring.guru/design-patterns/builder/csharp/example)
 
-using System;
-using System.Collections.Generic;
-
 namespace RefactoringGuru.DesignPatterns.Builder.Conceptual
 {
     // The Builder interface specifies methods for creating the different parts
@@ -39,7 +36,20 @@ namespace RefactoringGuru.DesignPatterns.Builder.Conceptual
         
         // All production steps work with the same product instance.
         
-        // TODO: implement add interface methods
+        public IBuilder AddPartA(){
+            this._product.Add("PartA1");
+            return this;
+        }
+
+        public IBuilder AddPartB(){
+            this._product.Add("PartB1");
+            return this;
+        }
+
+        public IBuilder AddPartC(){
+            this._product.Add("PartC1");
+            return this;
+        }
         
         // Concrete Builders are supposed to provide their own methods for
         // retrieving results. That's because various types of builders may
@@ -55,7 +65,11 @@ namespace RefactoringGuru.DesignPatterns.Builder.Conceptual
         // mandatory, and you can make your builders wait for an explicit reset
         // call from the client code before disposing of the previous result.
 
-        // TODO: implement build interface method
+        public Product Build(){
+            var result = _product;
+            this.Reset();
+            return result;
+        }
     }
     
     // It makes sense to use the Builder pattern only when your products are
@@ -105,12 +119,16 @@ namespace RefactoringGuru.DesignPatterns.Builder.Conceptual
         // building steps.
         public Product BuildMinimalViableProduct()
         {
-            // TODO: implement
+            _builder.AddPartA();
+            return _builder.Build();
         }
         
         public Product BuildFullFeaturedProduct()
         {
-            // TODO: implement
+            _builder.AddPartA();
+            _builder.AddPartB();
+            _builder.AddPartC();
+            return _builder.Build();
         }
     }
 
@@ -118,7 +136,16 @@ namespace RefactoringGuru.DesignPatterns.Builder.Conceptual
     {
         static void Main(string[] args)
         {
-            // TODO: Implement
+            var builder = new ConcreteBuilder();
+            var director = new Director(builder);
+
+            Console.WriteLine("Standard basic product:");
+            var mvp = director.BuildMinimalViableProduct();
+            Console.WriteLine(mvp.ListParts());
+
+            Console.WriteLine("Standard full featured product:");
+            var ffp = director.BuildFullFeaturedProduct();
+            Console.WriteLine(ffp.ListParts());
         }
     }
 }
