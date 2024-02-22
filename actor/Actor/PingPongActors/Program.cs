@@ -29,7 +29,7 @@ class Program
         IActorRef pongActor = actorSystem.ActorOf(pongActorProps, "pong");
 
         // start ping-pong between actors
-        // TODO: Start the ping pong by sending a message to one of the actors with "Tell"
+        pongActor.Tell(new Pong(0));
 
         // wait for ActorSystem to be terminated
         // (indefinitely in this app)
