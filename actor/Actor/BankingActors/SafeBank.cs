@@ -26,17 +26,17 @@ public class Bank : IBank
 
     public override bool TryWithdraw(string owner, double amount)
     {
-        throw new NotImplementedException();
+        return _bankActor.Ask<bool>(new Withdraw(owner, amount), _timeout).Result;
     }
 
     public override bool TryTransfer(string sourceOwner, string destinationOwner, double amount)
     {
-        throw new NotImplementedException();
+        return _bankActor.Ask<bool>(new Transfer(sourceOwner, destinationOwner, amount), _timeout).Result;
     }
 
     public override double GetBalance(string owner)
     {
-        throw new NotImplementedException();
+        return _bankActor.Ask<double>(new GetBalance(owner), _timeout).Result;
     }
 }
 
@@ -49,5 +49,67 @@ public record GetBalance(string Owner);
 
 public class BankActor : ReceiveActor
 {
-    // TODO: Implement
+    private Dictionary<string, Account> Accounts = new();
+
+    public BankActor()
+    {
+        Receive<CreateAccount>(createAccount =>
+        {
+            var account = new Account(createAccount.Owner, createAccount.Amount);
+            Accounts[createAccount.Owner] = account;
+            Sender.Tell(true);
+        });
+
+        Receive<Deposit>(deposit =>
+        {
+            if (Accounts.TryGetValue(deposit.Owner, out var account))
+            {
+                account.Deposit(deposit.Amount);
+            }
+        });
+
+        Receive<Withdraw>(withdraw =>
+        {
+            if (Accounts.TryGetValue(withdraw.Owner, out var account) && account.Withdraw(withdraw.Amount))
+            {
+                Sender.Tell(true);
+            }
+            else
+            {
+                Sender.Tell(false);
+            }
+        });
+
+        Receive<Transfer>(transfer =>
+        {
+            if (Accounts.TryGetValue(transfer.SourceOwner, out var sourceAccount) && Accounts.TryGetValue(transfer.DestinationOwner, out var destinationAccount))
+            {
+                if (sourceAccount.Withdraw(transfer.Amount))
+                {
+                    destinationAccount.Deposit(transfer.Amount);
+                    Sender.Tell(true);
+                }
+                else
+                {
+                    Sender.Tell(false);
+                }
+            }
+            else
+            {
+                Sender.Tell(false);
+            }
+        });
+
+        Receive<GetBalance>(balance =>
+        {
+            if (Accounts.TryGetValue(balance.Owner, out var account))
+            {
+                Sender.Tell(account.Balance);
+            }
+            else
+            {
+                Sender.Tell(0.0); // Consider how to handle account not found
+            }
+        });
+    }
 }

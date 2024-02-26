@@ -14,7 +14,7 @@ public class BankTests
     [Test]
     public void BankTransfersMaintainCorrectTotalAmountWithMultiThreading()
     {
-        var bank = new UnsafeBank();
+        var bank = new Bank();
 
         // Initially, create two accounts with a total balance of 300
         bank.CreateAccount("Alice", 150);
