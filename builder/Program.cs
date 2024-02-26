@@ -31,7 +31,27 @@ namespace RefactoringGuru.DesignPatterns.Builder.Conceptual
         {
             this.Reset();
         }
-        
+
+        public IBuilder AddPartA()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IBuilder AddPartB()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IBuilder AddPartC()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Product Build()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Reset()
         {
             this._product = new Product();
@@ -105,12 +125,12 @@ namespace RefactoringGuru.DesignPatterns.Builder.Conceptual
         // building steps.
         public Product BuildMinimalViableProduct()
         {
-            // TODO: implement
+            throw new NotImplementedException();
         }
         
         public Product BuildFullFeaturedProduct()
         {
-            // TODO: implement
+            throw new NotImplementedException();
         }
     }
 
