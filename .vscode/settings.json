@@ -3,5 +3,8 @@
 	"dotnet-test-explorer.enableTelemetry": false,
 	"dotnet-test-explorer.autoWatch": true,
 	"coverage-gutters.showLineCoverage": true,
-	"dotnet-test-explorer.testProjectPath": "*/*/*Test*.csproj"
+	"dotnet-test-explorer.testProjectPath": "**/*Test*.csproj",
+	"csharp.debug.symbolOptions.searchNuGetOrgSymbolServer": true,
+	"dotnetAcquisitionExtension.enableTelemetry": false,
+	"dotnet.server.useOmnisharp": true
 }
